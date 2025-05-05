@@ -1,0 +1,17 @@
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\bin\Debug\net8.0\PaymentGateway.Application.deps.json
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\bin\Debug\net8.0\PaymentGateway.Application.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\bin\Debug\net8.0\PaymentGateway.Application.pdb
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\bin\Debug\net8.0\PaymentGateway.Contracts.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\bin\Debug\net8.0\PaymentGateway.Domain.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\bin\Debug\net8.0\PaymentGateway.Domain.pdb
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\bin\Debug\net8.0\PaymentGateway.Contracts.pdb
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentGateway.Application.csproj.AssemblyReference.cache
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentGateway.Application.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentGateway.Application.AssemblyInfoInputs.cache
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentGateway.Application.AssemblyInfo.cs
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentGateway.Application.csproj.CoreCompileInputs.cache
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentG.2B9B3B4A.Up2Date
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentGateway.Application.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\refint\PaymentGateway.Application.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\PaymentGateway.Application.pdb
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Application\obj\Debug\net8.0\ref\PaymentGateway.Application.dll

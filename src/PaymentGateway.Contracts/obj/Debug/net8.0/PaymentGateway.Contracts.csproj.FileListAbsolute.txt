@@ -1,0 +1,11 @@
+C:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\bin\Debug\net8.0\PaymentGateway.Contracts.deps.json
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\bin\Debug\net8.0\PaymentGateway.Contracts.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\bin\Debug\net8.0\PaymentGateway.Contracts.pdb
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\PaymentGateway.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\PaymentGateway.Contracts.AssemblyInfoInputs.cache
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\PaymentGateway.Contracts.AssemblyInfo.cs
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\PaymentGateway.Contracts.csproj.CoreCompileInputs.cache
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\PaymentGateway.Contracts.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\refint\PaymentGateway.Contracts.dll
+c:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\PaymentGateway.Contracts.pdb
+C:\Users\atac1\source\repos\PaymentGateway\src\PaymentGateway.Contracts\obj\Debug\net8.0\ref\PaymentGateway.Contracts.dll

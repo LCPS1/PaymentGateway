@@ -1,0 +1,76 @@
+using System;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using PaymentGateway.Application.Common.Interfaces;
+using PaymentGateway.Infrastructure.Cache.Options;
+
+namespace PaymentGateway.Infrastructure.Cache
+{
+   public class RedisCacheService : ICacheService
+    {
+        private readonly IDistributedCache _cache;
+        private readonly ILogger<RedisCacheService> _logger;
+        private readonly CacheSettings _settings;
+
+        public RedisCacheService(
+            IDistributedCache cache, 
+            IOptions<CacheSettings> settings,
+            ILogger<RedisCacheService> logger)
+        {
+            _cache = cache;
+            _settings = settings.Value;
+            _logger = logger;
+        }
+
+        public async Task<T?> GetAsync<T>(string key)
+        {
+            try
+            {
+                var cachedValue = await _cache.GetStringAsync(key);
+                
+                if (string.IsNullOrEmpty(cachedValue))
+                    return default;
+                    
+                return JsonSerializer.Deserialize<T>(cachedValue);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving data from cache for key {Key}", key);
+                return default;
+            }
+        }
+
+        public async Task SetAsync<T>(string key, T value, TimeSpan? expiry = null)
+        {
+            try
+            {
+                var options = new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = expiry ?? TimeSpan.FromMinutes(_settings.DefaultExpiryMinutes)
+                };
+                
+                var serializedValue = JsonSerializer.Serialize(value);
+                await _cache.SetStringAsync(key, serializedValue, options);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error setting data in cache for key {Key}", key);
+            }
+        }
+
+        public async Task RemoveAsync(string key)
+        {
+            try
+            {
+                await _cache.RemoveAsync(key);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error removing data from cache for key {Key}", key);
+            }
+        }
+    }
+}

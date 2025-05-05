@@ -1,0 +1,47 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: payment-gateway-api
+    ports:
+      - "8080:80"
+      - "8443:443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=db;Database=PaymentGateway;User Id=sa;Password=SqlServer2023!;TrustServerCertificate=True;
+      - JwtSettings__Secret=this_is_a_very_strong_secret_key_for_development_only_change_in_production
+      - JwtSettings__Issuer=payment-gateway-api
+      - JwtSettings__Audience=payment-gateway-clients
+      - JwtSettings__ExpiryMinutes=60
+    depends_on:
+      - db
+    restart: on-failure
+    networks:
+      - payment-network
+    volumes:
+      - ./logs:/app/logs
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: payment-gateway-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SqlServer2023!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+    networks:
+      - payment-network
+    restart: always
+
+networks:
+  payment-network:
+    driver: bridge
+
+volumes:
+  sqldata:
+    driver: local
