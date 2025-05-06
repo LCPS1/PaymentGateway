@@ -29,7 +29,7 @@ The Payment Gateway API provides a secure and reliable way to process credit car
 
 1. Clone the repository
 
-        git clone https://github.com/yourusername/payment-gateway.git
+        git clone https://github.com/LCPS1/PaymentGateway
 
         cd payment-gateway
 

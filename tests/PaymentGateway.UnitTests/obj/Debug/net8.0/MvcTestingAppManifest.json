@@ -1,0 +1,7 @@
+{
+  "PaymentGateway.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Api",
+  "PaymentGateway.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Application",
+  "PaymentGateway.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Contracts",
+  "PaymentGateway.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Domain",
+  "PaymentGateway.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure"
+}

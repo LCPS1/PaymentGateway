@@ -4,6 +4,136 @@
     "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\PaymentGateway.UnitTests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Api\\PaymentGateway.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Api\\PaymentGateway.Api.csproj",
+        "projectName": "PaymentGateway.Api",
+        "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Api\\PaymentGateway.Api.csproj",
+        "packagesPath": "C:\\Users\\atac1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\atac1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Application\\PaymentGateway.Application.csproj": {
+                "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Application\\PaymentGateway.Application.csproj"
+              },
+              "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Contracts\\PaymentGateway.Contracts.csproj": {
+                "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Contracts\\PaymentGateway.Contracts.csproj"
+              },
+              "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Application\\PaymentGateway.Application.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -256,14 +386,14 @@
         }
       }
     },
-    "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\PaymentGateway.UnitTests.csproj": {
+    "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\PaymentGateway.UnitTests.csproj",
-        "projectName": "PaymentGateway.UnitTests",
-        "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\PaymentGateway.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj",
+        "projectName": "PaymentGateway.Infrastructure",
+        "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\atac1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\obj\\",
+        "outputPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -309,17 +439,141 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\PaymentGateway.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\PaymentGateway.UnitTests.csproj",
+        "projectName": "PaymentGateway.UnitTests",
+        "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\PaymentGateway.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\atac1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\tests\\PaymentGateway.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\atac1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Api\\PaymentGateway.Api.csproj": {
+                "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Api\\PaymentGateway.Api.csproj"
+              },
+              "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Application\\PaymentGateway.Application.csproj": {
+                "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Application\\PaymentGateway.Application.csproj"
+              },
+              "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj": {
+                "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj"
+              },
+              "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\atac1\\source\\repos\\PaymentGateway\\src\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.12.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.8.0, )"
+              "version": "[17.13.0, )"
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.20.70, )"
+              "version": "[4.20.72, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -327,13 +581,13 @@
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.6.3, )"
+              "version": "[2.9.3, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.5.5, )"
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
