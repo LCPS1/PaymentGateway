@@ -1,0 +1,72 @@
+2025-05-06 03:04:14.175 +00:00 [INF] Starting database initialization
+2025-05-06 03:04:14.497 +00:00 [INF] Ensuring clean database schema by recreating the database
+2025-05-06 03:04:30.909 +00:00 [ERR] An error occurred during database initialization
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server: Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass20_0.<<ExistsAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureDeletedAsync(CancellationToken cancellationToken)
+   at PaymentGateway.Infrastructure.DependencyInjection.InitializeDatabaseAsync(IServiceProvider serviceProvider) in /src/src/PaymentGateway.Infrastructure/DependencyInjection.cs:line 224
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2025-05-06 03:04:35.905 +00:00 [INF] Starting database initialization
+2025-05-06 03:04:36.082 +00:00 [INF] Ensuring clean database schema by recreating the database
+2025-05-06 03:04:37.118 +00:00 [INF] Creating database schema
+2025-05-06 03:04:37.993 +00:00 [INF] Found 2/2 required tables
+2025-05-06 03:04:37.997 +00:00 [INF] Seeding database
+2025-05-06 03:04:38.006 +00:00 [INF] Seeding merchant data
+2025-05-06 03:04:38.501 +00:00 [INF] Seeding payment data
+2025-05-06 03:04:38.721 +00:00 [INF] Database initialization completed successfully
+2025-05-06 03:04:38.894 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-05-06 03:04:38.917 +00:00 [WRN] No XML encryptor configured. Key {c773f6fe-e31b-4e40-9f75-2c82269cd66b} may be persisted to storage in unencrypted form.
+2025-05-06 03:04:38.938 +00:00 [WRN] Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:80'.
+2025-05-06 03:04:39.014 +00:00 [INF] Now listening on: http://[::]:80
+2025-05-06 03:04:39.015 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-06 03:04:39.016 +00:00 [INF] Hosting environment: Docker
+2025-05-06 03:04:39.016 +00:00 [INF] Content root path: /app
+2025-05-06 03:05:48.519 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-05-06 03:05:48.575 +00:00 [INF] Processing authentication request
+2025-05-06 03:05:48.599 +00:00 [INF] Handling AuthenticateMerchantCommand
+2025-05-06 03:05:48.602 +00:00 [INF] Handling merchant authentication for API key: test_shop_key_456
+2025-05-06 03:05:48.604 +00:00 [INF] Authenticating merchant with API key: test_shop_key_456
+2025-05-06 03:05:48.669 +00:00 [INF] Authentication successful for merchant "af82e9bc-90d4-4f34-a8e6-c6701277a0d0"
+2025-05-06 03:05:48.671 +00:00 [INF] Authentication successful for merchant: af82e9bc-90d4-4f34-a8e6-c6701277a0d0
+2025-05-06 03:05:48.672 +00:00 [INF] Handled AuthenticateMerchantCommand in 71ms
+2025-05-06 03:05:48.685 +00:00 [INF] HTTP POST /api/v1/Auth/login responded 200 in 161.7641 ms
+2025-05-06 03:06:29.572 +00:00 [INF] HTTP POST /api/v1/Payments responded 400 in 45.3515 ms
+2025-05-06 03:06:37.206 +00:00 [INF] HTTP POST /api/v1/Payments responded 400 in 8.4317 ms
+2025-05-06 03:06:52.515 +00:00 [INF] Processing payment request
+2025-05-06 03:06:52.567 +00:00 [INF] Handling ProcessPaymentCommand
+2025-05-06 03:06:52.576 +00:00 [INF] Processing payment request from merchant "af82e9bc-90d4-4f34-a8e6-c6701277a0d0"
+2025-05-06 03:06:52.648 +00:00 [INF] Processing payment "e94c93f9-31ce-4e7d-ad36-d3b08226f7da" with acquirer
+2025-05-06 03:06:52.649 +00:00 [INF] Sending payment request to: "http://payment-gateway-api/api/v1/acquirer/payments"
+2025-05-06 03:06:52.660 +00:00 [INF] Start processing HTTP request POST http://payment-gateway-api/api/v1/acquirer/payments
+2025-05-06 03:06:52.666 +00:00 [INF] Sending HTTP request POST http://payment-gateway-api/api/v1/acquirer/payments
+2025-05-06 03:06:52.692 +00:00 [INF] Acquirer received payment request
+2025-05-06 03:06:52.693 +00:00 [INF] Acquirer approved payment
+2025-05-06 03:06:52.697 +00:00 [INF] HTTP POST /api/v1/acquirer/payments responded 200 in 10.8321 ms
+2025-05-06 03:06:52.701 +00:00 [INF] Received HTTP response headers after 32.2131ms - 200
+2025-05-06 03:06:52.707 +00:00 [INF] End processing HTTP request after 51.9012ms - 200
+2025-05-06 03:06:52.711 +00:00 [INF] Payment "e94c93f9-31ce-4e7d-ad36-d3b08226f7da" processed successfully with reference ACQ_58d130e696014bbca30fa5b80f370e0c
+2025-05-06 03:06:52.728 +00:00 [INF] Handled ProcessPaymentCommand in 159ms
+2025-05-06 03:06:52.734 +00:00 [INF] HTTP POST /api/v1/Payments responded 200 in 225.2790 ms

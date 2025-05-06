@@ -15,8 +15,12 @@ services:
       - JwtSettings__Issuer=payment-gateway-api
       - JwtSettings__Audience=payment-gateway-clients
       - JwtSettings__ExpiryMinutes=60
+      - ConnectionStrings__Redis=redis:6379
+      - CacheSettings__InstanceName=PaymentGateway
+      - CacheSettings__DefaultExpiryMinutes=10
     depends_on:
       - db
+      - redis
     restart: on-failure
     networks:
       - payment-network
@@ -38,10 +42,24 @@ services:
       - payment-network
     restart: always
 
+  redis:
+    image: redis:alpine
+    container_name: payment-gateway-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - payment-network
+    command: redis-server --appendonly yes
+    restart: always
+    volumes:
+      - redis-data:/data
+  
 networks:
   payment-network:
     driver: bridge
 
 volumes:
   sqldata:
+    driver: local
+  redis-data:
     driver: local

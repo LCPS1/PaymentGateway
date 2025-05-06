@@ -14,6 +14,7 @@ namespace PaymentGateway.Infrastructure.Cache
         private readonly IDistributedCache _cache;
         private readonly ILogger<RedisCacheService> _logger;
         private readonly CacheSettings _settings;
+        private readonly bool _isRedisAvailable;
 
         public RedisCacheService(
             IDistributedCache cache, 
@@ -23,12 +24,26 @@ namespace PaymentGateway.Infrastructure.Cache
             _cache = cache;
             _settings = settings.Value;
             _logger = logger;
+            
+            // Check if Redis appears to be configured
+            _isRedisAvailable = !string.IsNullOrEmpty(_settings.ConnectionString);
+            
+            _logger.LogInformation(
+                "Cache service initialized. Redis available: {IsAvailable}, Instance: {Instance}", 
+                _isRedisAvailable, 
+                _settings.InstanceName);
         }
 
         public async Task<T?> GetAsync<T>(string key)
         {
             try
             {
+                if (!_isRedisAvailable)
+                {
+                    _logger.LogDebug("Redis not available, cache miss for key {Key}", key);
+                    return default;
+                }
+                
                 var cachedValue = await _cache.GetStringAsync(key);
                 
                 if (string.IsNullOrEmpty(cachedValue))
@@ -39,12 +54,18 @@ namespace PaymentGateway.Infrastructure.Cache
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error retrieving data from cache for key {Key}", key);
-                return default;
+                return default;  // Return default on error instead of throwing
             }
         }
 
         public async Task SetAsync<T>(string key, T value, TimeSpan? expiry = null)
         {
+            if (!_isRedisAvailable)
+            {
+                _logger.LogDebug("Redis not available, skipping cache set for key {Key}", key);
+                return;
+            }
+            
             try
             {
                 var options = new DistributedCacheEntryOptions
@@ -58,11 +79,18 @@ namespace PaymentGateway.Infrastructure.Cache
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error setting data in cache for key {Key}", key);
+                // Don't throw - cache failures should not break the application
             }
         }
 
         public async Task RemoveAsync(string key)
         {
+            if (!_isRedisAvailable)
+            {
+                _logger.LogDebug("Redis not available, skipping cache remove for key {Key}", key);
+                return;
+            }
+            
             try
             {
                 await _cache.RemoveAsync(key);
@@ -70,7 +98,9 @@ namespace PaymentGateway.Infrastructure.Cache
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error removing data from cache for key {Key}", key);
+                // Don't throw - cache failures should not break the application
             }
         }
+
     }
 }

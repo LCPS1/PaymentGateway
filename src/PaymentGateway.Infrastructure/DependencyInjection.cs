@@ -63,7 +63,24 @@ namespace PaymentGateway.Infrastructure
             services.AddStackExchangeRedisCache(options =>
             {
                 var cacheSettings = configuration.GetSection(nameof(CacheSettings)).Get<CacheSettings>();
-                options.Configuration = cacheSettings?.ConnectionString ?? configuration.GetConnectionString("Redis");
+                var redisConnectionString = cacheSettings?.ConnectionString;
+                
+                if (string.IsNullOrEmpty(redisConnectionString))
+                {
+                    redisConnectionString = configuration.GetConnectionString("Redis");
+                }
+                
+                // If we still don't have a connection string, log a warning instead of failing
+                if (string.IsNullOrEmpty(redisConnectionString))
+                {
+                    var logger = services.BuildServiceProvider().GetService<ILogger<ApplicationDbContext>>();
+                    logger?.LogWarning("Redis connection string not found. Cache will be disabled.");
+                    
+                    // Use a dummy configuration that won't cause exceptions but won't work
+                    redisConnectionString = "localhost:0";
+                }
+                
+                options.Configuration = redisConnectionString;
                 options.InstanceName = cacheSettings?.InstanceName ?? "PaymentGateway:";
             });
             
